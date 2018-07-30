@@ -76,7 +76,7 @@ section {
 }
 
 nav {
-    padding-top: 10px;
+    padding: 10px;
     background-color: #252831;
     height: 80px;
     height: 70px;
@@ -124,11 +124,15 @@ nav h1 {
 }
 
 nav h1 a {
-    color: #9ACD32;
+    color: #3397db;
     font-size: 14pt;
     font-weight: 200;
     letter-spacing: 10px;
     text-transform: uppercase;
+}
+
+nav h1 a:hover {
+    color: #9ACD32;
 }
 
 #breadcrumb {
@@ -158,7 +162,7 @@ nav h1 a {
 /* Add a color to all links inside the list */
 
 #breadcrumb li a {
-    color: #1D6FAA;
+    color: #3397db;
     text-decoration: none;
 }
 
@@ -166,7 +170,7 @@ nav h1 a {
 /* Add a color on mouse-over */
 
 #breadcrumb li a:hover {
-    color: #01447e;
+    /* color: #9ACD32; */
     text-decoration: underline;
 }
 
@@ -255,7 +259,7 @@ nav h1 a {
 }
 
 #restaurants-list li h1 {
-    color: #d63300;
+    color: #3397db;
     font-family: Arial, sans-serif;
     font-size: 14pt;
     font-weight: 200;
@@ -271,7 +275,7 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-    background-color: #d63300;
+    background-color: #3397db;
     border-bottom: 1px solid #eee;
     color: #fff;
     display: inline-block;
@@ -281,6 +285,11 @@ nav h1 a {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+#restaurants-list li a:hover {
+    background-color: #9ACD32;
+    color: #000000;
 }
 
 #restaurants-list li a:focus {
@@ -396,4 +405,54 @@ nav h1 a {
 #restaurant-hours td {
     color: #666;
     width: 50%;
+}
+
+
+/* Responsive title */
+
+@media screen and (min-width: 400px) {
+    nav {
+        padding-top: 20px;
+    }
+}
+
+
+/* Medium devices */
+
+@media screen and (min-width: 500px) {
+    .inside #map-container {
+        height: 400px;
+    }
+}
+
+
+/* Larger devices */
+
+@media screen and (min-width: 680px) {
+    .inside #map-container {
+        height: 90%;
+        width: 50%;
+        position: fixed;
+        right: 0;
+        top: 90px;
+    }
+    .filter-options {
+        height: 100px;
+    }
+    .filter-options h2 {
+        font-size: 15pt;
+    }
+    #restaurant-container,
+    #review-container {
+        width: 40%;
+    }
+    #reviews-list li {
+        width: 40%;
+    }
+    .inside #restaurant-container {
+        margin-top: 0;
+    }
+    #footer {
+        font-size: 10pt;
+    }
 }
