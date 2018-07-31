@@ -124,7 +124,7 @@ nav h1 {
 }
 
 nav h1 a {
-    color: #3397db;
+    color: #F0FFFF;
     font-size: 14pt;
     font-weight: 200;
     letter-spacing: 10px;
@@ -132,7 +132,7 @@ nav h1 a {
 }
 
 nav h1 a:hover {
-    color: #9ACD32;
+    color: #3397db;
 }
 
 #breadcrumb {
@@ -167,7 +167,7 @@ nav h1 a:hover {
 }
 
 
-/* Add a color on mouse-over */
+/* Add an underline on mouse-over */
 
 #breadcrumb li a:hover {
     /* color: #9ACD32; */
@@ -408,7 +408,10 @@ nav h1 a:hover {
 }
 
 
-/* Responsive title */
+/* ====================== Media queries for resposive web pages ====================== */
+
+
+/* Responsive Title */
 
 @media screen and (min-width: 400px) {
     nav {
