@@ -193,3 +193,22 @@ getParameterByName = (name, url) => {
         return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+/* Add service worker API  */
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./js/sw/service-worker.js').then((registration) => {
+        if (registration.installing) {
+            console.log('ServiceWorker installing...');
+        } else if (registration.waiting) {
+            console.log('ServiceWorker waiting...');
+        } else if (registration.active) {
+            console.log('ServiceWorker active...');
+        }
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch((error) => {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', error);
+    });
+}
