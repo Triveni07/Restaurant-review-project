@@ -164,7 +164,7 @@ createRestaurantHTML = (restaurant) => {
     image.src = DBHelper.imageUrlForRestaurant(restaurant);
     li.append(image);
 
-    const name = document.createElement('h1');
+    const name = document.createElement('h2');
     name.innerHTML = restaurant.name;
     li.append(name);
 
@@ -222,12 +222,9 @@ if ('serviceWorker' in navigator) {
             console.log('ServiceWorker waiting...');
         } else if (registration.active) {
             console.log('ServiceWorker active...');
-
         }
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        registration.update();
-
     }).catch((error) => {
         // registration failed :(
         console.log('ServiceWorker registration failed: ', error);
